@@ -10,12 +10,13 @@ public interface IUnitOfWork
     ICargo Cargos { get;}
     ICliente Clientes { get;}
     IColor Colores { get;}
-    IDepartamento Departamentos { get;}
+    IMunicipio Municipios { get;}
     IDetalleOrden DetalleOrdenes { get;}
     IDetalleVenta DetalleVentas { get;}
     IEmpleado Empleados { get;}
     IEmpresa Empresas { get;}
     IEstado Estados { get;}
+    IDepartamento Departamentos { get;}
     IFormaPago FormaPagos { get;}
     IGenero Generos { get;}
     IInsumo Insumos { get;}
