@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace Core.Interfaces;
 public interface IUnitOfWork
 {
-    IPais PaisIPais { get; }  //InterfazEntidad EntidadPlural {get;}
+    IPais Paises { get; }  //InterfazEntidad EntidadPlural {get;}
     ICargo Cargos { get;}
     ICliente Clientes { get;}
     IColor Colores { get;}
@@ -21,7 +21,6 @@ public interface IUnitOfWork
     IInsumo Insumos { get;}
     IInventario Inventarios { get;}
     IOrden Ordenes { get;}
-    IPais Paises { get;}
     IPrenda Prendas { get;}
     IProveedor Proveedores { get;}
     ITalla Tallas { get;}
