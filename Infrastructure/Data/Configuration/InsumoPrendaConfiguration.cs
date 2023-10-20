@@ -11,13 +11,12 @@ namespace Infrastructure.Data.Configuracion
             builder.ToTable("InsumoPrenda");
 
             builder.HasKey(e => new { e.IdInsumo, e.IdPrenda});
-            builder.HasKey(e => new { e.IdPrenda, e.IdInsumo});
 
-            builder.HasOne(e => e.Insumo)
+            builder.HasOne(e => e.Insumos)
             .WithMany(e => e.InsumoPrendas)
             .HasForeignKey(e => e.IdInsumo);
 
-            builder.HasOne(e => e.Prenda)
+            builder.HasOne(e => e.Prendas)
             .WithMany(e => e.InsumoPrendas)
             .HasForeignKey(e => e.IdPrenda);
 

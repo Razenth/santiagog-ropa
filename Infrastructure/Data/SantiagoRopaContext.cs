@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Core.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -41,12 +42,17 @@ public class SantiagoRopaContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        /*modelBuilder.Entity<Cliente>()
-        .HasOne(a => a.ClienteDireccion)
-        .WithOne(b => b.Clientes)
-        .HasForeignKey<ClienteDireccion>(b => b.IdCliente);*/
+
+        // modelBuilder.Entity<InsumoPrenda>(
+        // eb =>
+        // {
+        //     eb.HasNoKey();
+        //     eb.ToView("View_InsumoKey");
+        //     eb.Property(v => v.IdInsumo);
+        // });
 
         base.OnModelCreating(modelBuilder);
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }
 }
 }

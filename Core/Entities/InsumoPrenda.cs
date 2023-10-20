@@ -8,9 +8,8 @@ namespace Core.Entities
     public class InsumoPrenda
     {
         public int IdInsumo { get; set; }
-        public Insumo Insumo { get; set; }
+        public Insumo Insumos { get; set; }
         public int IdPrenda { get; set; }
-        public Prenda Prenda { get; set; }
-        // modelBuilder.Entity<Department>().HasKey(t => new { t.DepartmentID, t.Name });
+        public Prenda Prendas { get; set; }
     }
 }
