@@ -48,7 +48,7 @@ namespace RopaApi.Extensions
         }
         public static void AddApplicationServices(this IServiceCollection services)
             {
-                // services.AddScoped<IUnitOfWork,UnitOfWork>();
+                services.AddScoped<IUnitOfWork,UnitOfWork>();
             }
     }
 }
