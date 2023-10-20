@@ -1,5 +1,8 @@
+using System.Reflection;
+using AspNetCoreRateLimit;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using RopaApi.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +12,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.ConfigureRateLimiting();
+builder.Services.AddAutoMapper(Assembly.GetEntryAssembly());
+builder.Services.ConfigureCors();
+builder.Services.AddApplicationServices();
 
 builder.Services.AddDbContext<SantiagoRopaContext>(options =>
 {
@@ -30,5 +37,9 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors("CorsPolicy");
+
+app.UseIpRateLimiting();
 
 app.Run();

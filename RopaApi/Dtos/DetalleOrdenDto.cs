@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace RopaApi.Dtos
 {
-    public class DetalleOrden
+    public class DetalleOrdenDto
     {
         public int Id { get; set; }
         public int IdOrden { get; set; }
