@@ -1,4 +1,4 @@
-using Infrastructure.Data.Configuration;
+using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<RopaContext>(options =>
+builder.Services.AddDbContext<SantiagoRopaContext>(options =>
 {
     string connectionString = builder.Configuration.GetConnectionString("MySqlConex");
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
