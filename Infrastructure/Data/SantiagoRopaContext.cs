@@ -42,15 +42,6 @@ public class SantiagoRopaContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-
-        // modelBuilder.Entity<InsumoPrenda>(
-        // eb =>
-        // {
-        //     eb.HasNoKey();
-        //     eb.ToView("View_InsumoKey");
-        //     eb.Property(v => v.IdInsumo);
-        // });
-
         base.OnModelCreating(modelBuilder);
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }
