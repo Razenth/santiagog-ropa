@@ -8,7 +8,7 @@ namespace Core.Entities
     public class Insumo : BaseEntity
     {
         public string Nombre { get; set; }
-        public decimal ValorUnit { get; set; }
+        public double ValorUnit { get; set; }
         public int stockMin{ get; set; }
         public int stockMax{ get; set; }
         public ICollection<InsumoPrenda> InsumoPrendas { get; set; }

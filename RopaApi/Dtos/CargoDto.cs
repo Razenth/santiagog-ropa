@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Core.Entities
+namespace RopaApi.Dtos
 {
-    public class Cargo : BaseEntity
+    public class CargoDto
     {
+        public int Id { get; set; }
         public string Descripcion { get; set; }
         public double SueldoBase { get; set; }
-        public ICollection<Empleado> Empleados { get; set; }
     }
 }

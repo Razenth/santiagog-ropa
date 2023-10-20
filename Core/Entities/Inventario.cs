@@ -12,6 +12,7 @@ namespace Core.Entities
         public Prenda Prenda { get; set; }
         public double valorVtaCop { get; set; }
         public double valorVtaUsd { get; set; }
-
+        public ICollection<DetalleVenta> DetalleVentas { get; set; }
+        public ICollection<InventarioTalla> InventarioTallas { get; set; }
     }
 }

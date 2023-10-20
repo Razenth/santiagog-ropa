@@ -11,5 +11,6 @@ namespace Core.Entities
         public int IdPais { get; set; }
         public Pais Pais { get; set; }
         public ICollection<Municipio> Municipios { get; set; }
+        public ICollection<Empresa> Empresas { get; set; }
     }
 }
